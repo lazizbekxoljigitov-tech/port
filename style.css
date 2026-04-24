@@ -67,10 +67,10 @@ body {
 
 .hero__img {
   width: 600px;
-  position: absolute;
+  position: relative;
   bottom: 0;
   display: flex;
-  z-index: 11000;
+  z-index: 1;
   overflow: hidden;
 }
 
