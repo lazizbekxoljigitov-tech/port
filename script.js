@@ -15,5 +15,7 @@ gsap.from(".hero__img", {
   opacity: 0,
   y: 100,
   duration: 1,
-  delay:1
+  delay: 1,
 });
+
+AOS.init();
