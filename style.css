@@ -3,6 +3,11 @@
   src: url("./font/Inter/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: two;
+  src: url("/font/Roboto_Mono/RobotoMono-VariableFont_wght.ttf");
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -51,13 +56,6 @@ body {
   font-size: 19px;
 }
 
-.discription__text {
-  font-weight: 300;
-  font-family: inter;
-  text-align: end;
-  color: var(--main-color);
-}
-
 .hero {
   height: 100vh;
   display: flex;
@@ -67,8 +65,9 @@ body {
 
 .hero__img {
   width: 600px;
+  height: 600px;
   position: relative;
-  bottom: 0;
+  bottom: -120px;
   display: flex;
   z-index: 1;
   overflow: hidden;
@@ -88,11 +87,12 @@ body {
 
 .banner__text {
   position: absolute;
-  bottom: 300px;
+  bottom: 220px;
   font-size: 140px;
   color: var(--main-color);
   font-weight: 900;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .main {
@@ -195,7 +195,7 @@ body {
 .card__img:hover {
   width: 100%;
   cursor: pointer;
-  box-shadow: 0px 0px 28px 13px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 28px 13px var(--sub-color);
 }
 
 .cards__main--one {
@@ -230,7 +230,7 @@ body {
 
 .center__text {
   font-weight: 300;
-  border: 0.4px solid --color;
+  border: 0.4px solid var(--color);
   display: inline;
   padding: 5px;
   border-radius: 20px;
@@ -262,7 +262,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: var(--main-color);
   font-size: 20px;
   background-color: #455ce9;
   position: absolute;
@@ -292,9 +292,9 @@ body {
 
 .black {
   height: 500px;
-  background-color: #000;
+  background-color: var(--sub-color);
   margin-top: 40px;
-  color: white;
+  color: var(--main-color);
   padding: 0px 15px;
   padding-top: 20px;
   padding-right: 20px;
@@ -326,7 +326,7 @@ body {
   border-radius: 50%;
   padding: 10px;
   border: none;
-  box-shadow: 0px 0px 50px 1px rgb(255, 255, 255);
+  box-shadow: 0px 0px 50px 1px var(--main-color);
 }
 
 .chqsh {
@@ -337,4 +337,114 @@ body {
 
 button {
   cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  gap: 10px;
+  text-transform: uppercase;
+}
+
+.menu__link {
+  color: var(--main-color);
+  font-family: two;
+  font-weight: 900;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu__link:hover {
+  color: rgb(220, 220, 220);
+  transform: scale(1.1);
+}
+
+.discription__text {
+  font-weight: 300;
+  font-family: inter;
+  text-align: end;
+  color: var(--main-color);
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+}
+
+.hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.066);
+  display: flex;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons {
+  padding: 10px 30px;
+  display: flex;
+  color: #000;
+  gap: 20px;
+  color: white;
+  bottom: 0;
+  position: fixed;
+  bottom: 20px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.4),
+    inset 0 0 20px rgba(255, 255, 255, 0.114);
+  color: white;
+  z-index: 1;
+}
+
+.home,
+.terminal,
+.cub,
+.per,
+.doc,
+.git,
+.telegram {
+  color: rgb(0, 0, 0);
+  position: relative;
+  font-size: 30px;
+  transition: all 0.2s ease-in-out;
+}
+
+.home:hover,
+.terminal:hover,
+.cub:hover,
+.doc:hover,
+.git:hover,
+.telegram:hover {
+  font-size: 40px;
+  border-radius: 10px;
+  padding: 10px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow:
+  0 10px 40px rgba(0, 0, 0, 0.4),
+  inset 0 0 20px rgba(255, 255, 255, 0.114);
+  color: white;
+  color: rgba(0, 0, 0, 0.564);
+
+}
+
+.per:hover {
+  font-size: 40px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.4),
+    inset 0 0 20px rgba(255, 255, 255, 0.114);
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  color: rgba(0, 0, 0, 0.564);
 }
